@@ -1,0 +1,136 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+:root {
+  --img: url('https://source.unsplash.com/random/1920x1080');
+}
+
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.bg {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  filter: blur(15px) grayscale(0.54) sepia(0.5);
+  background-attachment: fixed;
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -10;
+  padding: 0;
+  transform: scale(1.03);
+}
+
+
+.quote-box {
+  width: 50%;
+  min-height: 40%;
+  background: hsla(0, 0%, 10%, 0.95);
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  width: 2000%;
+  background: rgba(14, 14, 14, 0.95);
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+}
+
+.quote-header {
+  background: #602221;
+  color: #FFCB1E;
+  padding: 3%;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.quote-content {
+  display: flex;
+  align-items: center;
+  flex: 6 0 0;
+}
+
+.quote-text {
+  font-style: italic; 
+  flex: 1 1 50%;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  text-align: center;
+  color: hsl(0, 0%, 80%);
+  padding: 3% 6%;
+}
+
+.quote-author {
+  flex: 1 1 0;
+  align-self: flex-end;
+  font-weight: 600;
+  color: #F21C46;
+}
+
+.quote-buttons {
+  flex: 1 1 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container {
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 0.3rem;
+  margin: 0 1rem;
+}
+
+.quote-buttons button { 
+  background: inherit;
+  color: rgb(219, 204, 204);
+  cursor: pointer;
+  font-size: 2rem;
+  justify-self: flex-end;
+  transition: color 250ms linear;
+  border: none;
+  filter: hue-rotate(45deg);
+}
+
+.quote-buttons > button:hover { 
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .quote-box {
+    width: 98%;
+  }
+
+  .quote-text {
+    font-size: 1.5rem;
+  }
+
+  .quote-buttons > button {
+    font-size: 2.5rem;
+  }
+}
