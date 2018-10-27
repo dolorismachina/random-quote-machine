@@ -1,7 +1,6 @@
 const quoteUrl = 'https://talaikis.com/api/quotes/random/';
 const imgAPI = 'https://source.unsplash.com/random/1280x720';
 
-window.addEventListener('load', fetchQuote());
 // Element references
 const bg1 = document.querySelector('#bg1');
 const bg2 = document.querySelector('#bg2');
@@ -10,6 +9,7 @@ const quoteAuthor = document.querySelector('.quote-author');
 
 addEventListeners();
 
+window.addEventListener('load', getNewQuote());
 
 const getQuoteBtn = document.querySelector('.next-quote');
 getQuoteBtn.addEventListener('click', e => {
