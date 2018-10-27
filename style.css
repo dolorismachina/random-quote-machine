@@ -38,6 +38,7 @@ body {
   z-index: -10;
   padding: 0;
   transform: scale(1.03);
+  animation-fill-mode: forwards;
 }
 
 
@@ -122,6 +123,36 @@ body {
 }
 
 @media (max-width: 1024px) {
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 100%;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
   .quote-box {
     width: 98%;
   }
