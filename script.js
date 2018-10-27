@@ -21,6 +21,8 @@ function fetchQuote() {
     .then(res =>  res.json())
     .then(json => {
       injectQuote(json);
+      injectQuote(json)
+    .catch(e => console.error(e));
   });
 }
 
@@ -38,7 +40,7 @@ function fetchBackground() {
       swapImages(res.url);
       fetchQuote();
     })
-    .catch( e => console.log(e) );
+    .catch( e => console.error(e) );
 }
 
 function getNewQuote() {
