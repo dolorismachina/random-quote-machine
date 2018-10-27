@@ -92,6 +92,7 @@ body {
   align-self: flex-end;
   font-weight: 600;
   color: #F21C46;
+  display: block;
 }
 
 .quote-buttons {
