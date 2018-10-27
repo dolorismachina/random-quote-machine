@@ -12,15 +12,14 @@ addEventListeners();
 window.addEventListener('load', getNewQuote());
 
 const getQuoteBtn = document.querySelector('.next-quote');
-getQuoteBtn.addEventListener('click', e => {
+getQuoteBtn.addEventListener('click', e => {  
   getNewQuote();
 });
 
 function fetchQuote() {
   window.fetch(quoteUrl)
-    .then(res =>  res.json())
+    .then(res => res.json())
     .then(json => {
-      injectQuote(json);
       injectQuote(json)
     .catch(e => console.error(e));
   });
