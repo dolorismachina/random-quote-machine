@@ -27,7 +27,6 @@ function fetchQuote() {
 }
 
 function injectQuote(quoteData) {
-  console.log('fetch')
   quoteText.textContent = `"${quoteData.quote}"`;
   quoteAuthor.textContent = quoteData.author;
 
@@ -46,6 +45,7 @@ function fetchBackground() {
 function getNewQuote() {
   fetchBackground();
 }
+
 function swapImages(newImg) {
   const img = new Image();
   img.src = newImg;
@@ -62,10 +62,6 @@ function swapImages(newImg) {
     img.remove();
   }
 }
-
-  
-}
-
 
 function addEventListeners() {
   bg1.addEventListener('animationend', e => {
