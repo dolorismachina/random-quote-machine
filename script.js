@@ -35,9 +35,7 @@ function injectQuote(quoteData) {
 function fetchBackground() {
   window.fetch(imgAPI)
     .then( res => {
-      const imgProp = `url("${res.url}")`;
-      swapImages(imgProp);
-
+      swapImages(res.url);
       fetchQuote();
     })
     .catch( e => console.log(e) );
@@ -47,14 +45,21 @@ function getNewQuote() {
   fetchBackground();
 }
 function swapImages(newImg) {
+  const img = new Image();
+  img.src = newImg;
+  img.onload = e => {
+    const imgProp = `url("${newImg}")`;
+    const oldImg = document.querySelector('#bg1').style.getPropertyValue('--img');
+   
+    bg1.style.setProperty('--img', imgProp);
+    bg2.style.setProperty('--img', oldImg);
   
-  const oldImg = document.querySelector('#bg1').style.getPropertyValue('--img');
-  
-  bg2.style.setProperty('--img', oldImg);
-  bg1.style.setProperty('--img', newImg);
+    bg1.classList.add('fade-in');
+    bg2.classList.add('fade-out');
 
-  bg1.classList.add('fade-in');
-  bg2.classList.add('fade-out');
+    img.remove();
+  }
+}
 
   
 }
