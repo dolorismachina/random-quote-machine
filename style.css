@@ -68,6 +68,12 @@ body {
   flex: 6 0 0;
 }
 
+#twitter-share {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+}
+
 .quote-text {
   font-style: italic; 
   flex: 1 1 50%;

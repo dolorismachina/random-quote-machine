@@ -6,6 +6,8 @@ const bg1 = document.querySelector('#bg1');
 const bg2 = document.querySelector('#bg2');
 const quoteText = document.querySelector('.quote-text');
 const quoteAuthor = document.querySelector('.quote-author');
+const twitterLink = document.querySelector('#twitter-share');
+const twitterURL = 'https://twitter.com/intent/tweet?text=';
 
 addEventListeners();
 
@@ -28,6 +30,9 @@ function fetchQuote() {
 function injectQuote(quoteData) {
   quoteText.textContent = `"${quoteData.quote}"`;
   quoteAuthor.textContent = quoteData.author;
+
+  const url = encodeURI(`${twitterURL}${quoteData.quote} - ${quoteData.author}"`);
+  twitterLink.href = url;
 
   quoteText.classList.add('fade-in');
 }
