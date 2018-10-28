@@ -41,7 +41,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-
 .quote-box {
   width: 50%;
   min-height: 40%;
@@ -52,29 +51,12 @@ body {
   flex-direction: column;
 }
 
-.bar {
-  width: 2000%;
-  background: rgba(14, 14, 14, 0.95);
-  position: absolute;
-  top: 40%;
-  bottom: 40%;
-}
-
 .quote-header {
   background: #602221;
   color: #FFCB1E;
   padding: 3%;
   font-size: 1.7rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex: 1 0 0;
-}
-
-.quote-content {
-  display: flex;
-  align-items: center;
-  flex: 6 0 0;
 }
 
 .quote-text {
@@ -85,6 +67,9 @@ body {
   text-align: center;
   color: hsl(0, 0%, 80%);
   padding: 3% 6%;
+  display: flex;
+  align-items: center;
+  flex: 6 0 0;
 }
 
 .quote-author {
@@ -98,7 +83,8 @@ body {
 .quote-buttons {
   flex: 1 1 25%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-container {
@@ -167,11 +153,12 @@ body {
 
 @media (max-width: 510px) {
   .quote-box {
-    min-height: 90%;
+    min-height: 100%;
+    width: 100%;
+    background: hsla(0, 0%, 10%, 0.75);
   }
 
   .quote-buttons {
-    flex-direction: column;
     flex: 0 0 0;
     transform: scale(0.8);
     justify-content: space-around;
