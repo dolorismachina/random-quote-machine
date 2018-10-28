@@ -41,7 +41,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-
 .quote-box {
   width: 50%;
   min-height: 40%;
@@ -50,14 +49,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-.bar {
-  width: 2000%;
-  background: rgba(14, 14, 14, 0.95);
-  position: absolute;
-  top: 40%;
-  bottom: 40%;
 }
 
 .quote-header {
