@@ -158,7 +158,9 @@ body {
 
 @media (max-width: 510px) {
   .quote-box {
-    min-height: 90%;
+    min-height: 100%;
+    width: 100%;
+    background: hsla(0, 0%, 10%, 0.75);
   }
 
   .quote-buttons {
