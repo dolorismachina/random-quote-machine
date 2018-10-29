@@ -10,7 +10,6 @@ fetch(imgAPI)
 
 // Element references
 const bg1 = document.querySelector('#bg1');
-bg1.style.setProperty('--img', 'url("https://images.unsplash.com/photo-1539021168289-eb91b3bb373e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=640&h=480&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=a9b2c534925fbce16d34e1d0f8d281ae")');
 
 const bg2 = document.querySelector('#bg2');
 const quoteText = document.querySelector('.quote-text');
