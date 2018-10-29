@@ -1,6 +1,5 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Marcellus+SC|Montserrat');
 
 :root {
   --img: url('https://source.unsplash.com/random/1280x720');
@@ -16,11 +15,11 @@ body {
 }
 
 a {
-  color: whitesmoke;
+  color: hsl(30, 25%, 65%);
 }
 
  a:visited {
-   color: whitesmoke;
+  color: hsl(30, 25%, 65%);
  }
 
 .container {
@@ -62,19 +61,22 @@ a {
 }
 
 .quote-header {
+  font-family: 'Montserrat', sans-serif;
   background: #602221;
-  color: #FFCB1E;
+  color: hsl(348, 85%, 44%);
   padding: 3%;
   font-size: 1.7rem;
   flex: 0 1 auto;
 }
 
 .quote-text {
+  font-family: 'Marcellus SC', serif;
   font-style: italic; 
-  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  color: hsl(30, 25%, 50%);
   line-height: 1.7;
   text-align: center;
-  color: hsl(0, 0%, 80%);
   padding: 3% 6%;
   flex: 1 1 0;
   display: flex;
@@ -84,8 +86,9 @@ a {
 
 .quote-author {
   font-weight: 600;
-  color: #F21C46;
+  color: hsl(46, 65%, 50%);
   display: block;
+  font-size: 95%;
 }
 
 .quote-buttons {
@@ -94,7 +97,7 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: whitesmoke;
+  color: #F21C46;
 }
 
 .button-container {
@@ -104,12 +107,11 @@ a {
 
 .quote-buttons button { 
   background: inherit;
-  color: rgb(219, 204, 204);
+  color: hsl(30, 25%, 65%);
   cursor: pointer;
   justify-self: flex-end;
   transition: color 250ms linear;
   border: none;
-  filter: hue-rotate(45deg);
   outline: none;
 }
 
@@ -154,7 +156,7 @@ a {
   }
 
   .quote-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .quote-buttons > button {
@@ -167,6 +169,10 @@ a {
     min-height: 100%;
     width: 100%;
     background: hsla(0, 0%, 10%, 0.75);
+  }
+
+  .quote-text {
+    font-size: 1.3rem;
   }
 
   .quote-buttons {
