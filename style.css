@@ -172,11 +172,7 @@ a {
   .quote-buttons {
     transform: scale(0.8);
     justify-content: space-around;
-<<<<<<< HEAD
-    height: 100%;
     font-size: 4rem;
-=======
->>>>>>> dev
   }
 
   .button-container {
