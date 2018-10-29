@@ -101,6 +101,7 @@ body {
   transition: color 250ms linear;
   border: none;
   filter: hue-rotate(45deg);
+  outline: none;
 }
 
 .quote-buttons > button:hover { 
