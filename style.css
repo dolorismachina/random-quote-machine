@@ -42,7 +42,9 @@ body {
 }
 
 .quote-box {
-  width: 50%;
+  width: auto;
+  min-width: 50%;
+  max-width: 70%;
   min-height: 40%;
   background: hsla(0, 0%, 10%, 0.95);
   border-radius: 3px;
@@ -61,7 +63,7 @@ body {
 
 .quote-text {
   font-style: italic; 
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   text-align: center;
   color: hsl(0, 0%, 80%);
@@ -138,6 +140,7 @@ body {
 @media (max-width: 1000px) {
   .quote-box {
     width: 98%;
+    max-width: 100%;
   }
 
   .quote-text {
