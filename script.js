@@ -1,7 +1,6 @@
 const quoteUrl = 'https://talaikis.com/api/quotes/random/';
 const imgAPI = 'https://source.unsplash.com/random/1920x1080';
 
-let backgroundImageBuffer = new Image();
 
 // Element references
 const bg1 = document.querySelector('#bg1');
@@ -14,6 +13,8 @@ const twitterURL = 'https://twitter.com/intent/tweet?text=';
 
 addEventListeners();
 
+let backgroundImageBuffer = null;
+backgroundImageBuffer = bufferBackground();
 
 
 function fetchQuote() {
@@ -62,7 +63,9 @@ function removeAnimation(target, animationName) {
 }
 
 function bufferBackground() {
-  backgroundImageBuffer.remove();
+  if (backgroundImageBuffer) {
+    backgroundImageBuffer.remove()
+  }
 
   const newBuffer = new Image();
   
