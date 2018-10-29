@@ -19,12 +19,7 @@ const twitterURL = 'https://twitter.com/intent/tweet?text=';
 
 addEventListeners();
 
-window.addEventListener('load', getNewQuote());
 
-const getQuoteBtn = document.querySelector('.next-quote');
-getQuoteBtn.addEventListener('click', e => {  
-  getNewQuote();
-});
 
 function fetchQuote() {
   window.fetch(quoteUrl)
@@ -86,6 +81,8 @@ function bufferBackground() {
 }
 
 function addEventListeners() {
+  window.addEventListener('load', getNewQuote());
+
   bg1.addEventListener('animationend', e => {
     bg1.classList.remove('fade-in');
   });
@@ -96,5 +93,9 @@ function addEventListeners() {
 
   quoteText.addEventListener('animationend', e => {
     quoteText.classList.remove('fade-in');
+  });
+
+  getQuoteBtn.addEventListener('click', e => {  
+    getNewQuote();
   });
 }
