@@ -50,7 +50,9 @@ a {
 }
 
 .quote-box {
-  width: 50%;
+  width: auto;
+  min-width: 50%;
+  max-width: 70%;
   min-height: 40%;
   background: hsla(0, 0%, 10%, 0.95);
   border-radius: 3px;
@@ -64,33 +66,30 @@ a {
   color: #FFCB1E;
   padding: 3%;
   font-size: 1.7rem;
-  flex: 1 0 0;
+  flex: 0 1 auto;
 }
 
 .quote-text {
   font-style: italic; 
-  flex: 1 1 50%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   text-align: center;
   color: hsl(0, 0%, 80%);
   padding: 3% 6%;
+  flex: 1 1 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  flex: 6 0 0;
 }
 
 .quote-author {
-  flex: 1 1 0;
-  align-self: flex-end;
   font-weight: 600;
   color: #F21C46;
   display: block;
 }
 
 .quote-buttons {
-  flex: 1 1 25%;
+  flex: 0 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,6 +110,7 @@ a {
   transition: color 250ms linear;
   border: none;
   filter: hue-rotate(45deg);
+  outline: none;
 }
 
 .quote-buttons > button:hover { 
@@ -150,6 +150,7 @@ a {
 @media (max-width: 1000px) {
   .quote-box {
     width: 98%;
+    max-width: 100%;
   }
 
   .quote-text {
@@ -169,11 +170,13 @@ a {
   }
 
   .quote-buttons {
-    flex: 0 0 0;
     transform: scale(0.8);
     justify-content: space-around;
+<<<<<<< HEAD
     height: 100%;
     font-size: 4rem;
+=======
+>>>>>>> dev
   }
 
   .button-container {
