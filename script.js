@@ -41,7 +41,7 @@ function getNewQuote() {
 
 function swapImages(newImg) {
   const imgProp = `url("${newImg}")`;
-  const oldImg = document.querySelector('#bg1').style.getPropertyValue('--img');
+  const oldImg = bg1.style.getPropertyValue('--img');
  
   bg1.style.setProperty('--img', imgProp);
   bg2.style.setProperty('--img', oldImg);
