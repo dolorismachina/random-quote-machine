@@ -58,8 +58,8 @@ function swapImages(newImg) {
   bg1.style.setProperty('--img', imgProp);
   bg2.style.setProperty('--img', oldImg);
 
-  bg1.classList.add('fade-in');
-  bg2.classList.add('fade-out');
+  addAnimation(bg1, 'fade-in');
+  addAnimation(bg2, 'fade-out');
 
   backgroundImageBuffer.remove();
   backgroundImageBuffer = new Image();
@@ -68,6 +68,14 @@ function swapImages(newImg) {
       backgroundImageBuffer.src = res.url;
     })
     .catch(e => console.error(e));
+}
+
+function addAnimation(target, animationName) {
+  target.classList.add(animationName);
+}
+
+function removeAnimation(target, animationName) {
+  target.classList.remove(animationName);
 }
 
 function addEventListeners() {
