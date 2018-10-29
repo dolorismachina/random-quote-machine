@@ -1,21 +1,19 @@
 const quoteUrl = 'https://talaikis.com/api/quotes/random/';
 const imgAPI = 'https://source.unsplash.com/random/1920x1080';
-
+const twitterURL = 'https://twitter.com/intent/tweet?text=';
 
 // Element references
 const bg1 = document.querySelector('#bg1');
-
 const bg2 = document.querySelector('#bg2');
 const quoteText = document.querySelector('.quote-text');
 const quoteAuthor = document.querySelector('.quote-author');
 const twitterLink = document.querySelector('#twitter-share');
-const twitterURL = 'https://twitter.com/intent/tweet?text=';
-
-addEventListeners();
+const getQuoteBtn = document.querySelector('.next-quote');
 
 let backgroundImageBuffer = null;
 backgroundImageBuffer = bufferBackground();
 
+addEventListeners();
 
 function fetchQuote() {
   window.fetch(quoteUrl)
