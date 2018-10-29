@@ -2,11 +2,6 @@ const quoteUrl = 'https://talaikis.com/api/quotes/random/';
 const imgAPI = 'https://source.unsplash.com/random/1920x1080';
 
 let backgroundImageBuffer = new Image();
-fetch(imgAPI)
-  .then(res => {
-    backgroundImageBuffer.src = res.url;
-    console.log(res.url);
-  })
 
 // Element references
 const bg1 = document.querySelector('#bg1');
