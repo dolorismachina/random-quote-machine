@@ -110,12 +110,12 @@ body {
 
 .fade-in {
   animation-name: fade-in;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 .fade-out {
   animation-name: fade-out;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @keyframes fade-in {
