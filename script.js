@@ -61,13 +61,7 @@ function swapImages(newImg) {
   addAnimation(bg1, 'fade-in');
   addAnimation(bg2, 'fade-out');
 
-  backgroundImageBuffer.remove();
-  backgroundImageBuffer = new Image();
-  fetch(imgAPI)
-    .then(res => {
-      backgroundImageBuffer.src = res.url;
-    })
-    .catch(e => console.error(e));
+  backgroundImageBuffer = bufferBackground();
 }
 
 function addAnimation(target, animationName) {
@@ -76,6 +70,20 @@ function addAnimation(target, animationName) {
 
 function removeAnimation(target, animationName) {
   target.classList.remove(animationName);
+}
+
+function bufferBackground() {
+  backgroundImageBuffer.remove();
+
+  const newBuffer = new Image();
+  
+  fetch(imgAPI)
+  .then(res => {
+    newBuffer.src = res.url;
+  })
+  .catch(e => console.error(e));
+
+  return newBuffer;
 }
 
 function addEventListeners() {
