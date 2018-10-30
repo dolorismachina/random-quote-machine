@@ -175,13 +175,14 @@ a {
   }
 
   .quote-text {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
   }
 
   .quote-buttons {
     font-size: 4rem;
     justify-content: space-around;
     transform: scale(0.8);
+    padding-bottom: 0;
   }
 
   .button-container {
