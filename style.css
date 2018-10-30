@@ -63,9 +63,9 @@ a {
 .quote-header {
   font-family: 'Montserrat', sans-serif;
   background: #602221;
-  color: hsl(348, 85%, 44%);
+  color: #E03531;
   padding: 3%;
-  font-size: 1.7rem;
+  font-size: 1.35rem;
   flex: 0 1 auto;
 }
 
@@ -86,9 +86,10 @@ a {
 
 .quote-author {
   font-weight: 600;
-  color: hsl(46, 65%, 50%);
+  color: #E09E31;
   display: block;
-  font-size: 95%;
+  font-size: 1.5rem;
+  padding-top: 1rem;
 }
 
 .quote-buttons {
@@ -96,8 +97,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: #F21C46;
+  padding-bottom: 1.2rem;
 }
 
 .button-container {
