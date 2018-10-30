@@ -1,5 +1,5 @@
 const quoteUrl = 'https://talaikis.com/api/quotes/random/';
-const imgAPI = 'https://source.unsplash.com/random/1920x1080';
+const imgAPI = 'https://source.unsplash.com/random/1280x720';
 const twitterURL = 'https://twitter.com/intent/tweet?text=';
 
 // Element references
