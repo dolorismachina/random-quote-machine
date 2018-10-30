@@ -14,14 +14,6 @@ body {
   padding: 0;
 }
 
-a {
-  color: hsl(30, 25%, 65%);
-}
-
- a:visited {
-  color: hsl(30, 25%, 65%);
- }
-
 .container {
   position: relative;
   height: 100vh;
@@ -69,6 +61,14 @@ a {
   flex: 0 1 auto;
 }
 
+.quote-author {
+  font-weight: 600;
+  color: #E09E31;
+  display: block;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
 .quote-text {
   font-family: 'Marcellus SC', serif;
   font-style: italic; 
@@ -82,14 +82,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.quote-author {
-  font-weight: 600;
-  color: #E09E31;
-  display: block;
-  font-size: 1.5rem;
-  padding-top: 1rem;
 }
 
 .quote-buttons {
@@ -120,6 +112,16 @@ a {
 .quote-buttons > button:hover { 
   color: white;
 }
+
+a {
+  color: hsl(30, 25%, 65%);
+}
+
+ a:visited {
+  color: hsl(30, 25%, 65%);
+ }
+
+
 
 .fade-in {
   animation-name: fade-in;
