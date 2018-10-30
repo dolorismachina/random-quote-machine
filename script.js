@@ -46,18 +46,17 @@ function swapImages(newImg) {
   bg1.style.setProperty('--img', imgProp);
   bg2.style.setProperty('--img', oldImg);
 
-  addAnimation(bg1, 'fade-in');
-  addAnimation(bg2, 'fade-out');
+  addAnimation('fade-in', bg1, bg2);
 
   backgroundImageBuffer = bufferBackground();
 }
 
-function addAnimation(target, animationName) {
-  target.classList.add(animationName);
+function addAnimation(animationName = '', ...targets) {
+  targets.forEach(target => target.classList.add(animationName));
 }
 
-function removeAnimation(target, animationName) {
-  target.classList.remove(animationName);
+function removeAnimation(animationName, ...targets) {
+  targets.forEach(target => target.classList.remove(animationName));
 }
 
 function bufferBackground() {
@@ -80,15 +79,15 @@ function addEventListeners() {
   window.addEventListener('load', getNewQuote());
 
   bg1.addEventListener('animationend', e => {
-    bg1.classList.remove('fade-in');
+    removeAnimation('fade-in', bg1)
   });
   
   bg2.addEventListener('animationend', e => {
-    bg2.classList.remove('fade-out');
+    removeAnimation('fade-out', bg2);
   });
 
   quoteText.addEventListener('animationend', e => {
-    quoteText.classList.remove('fade-in');
+    removeAnimation('fade-in', quoteText);
   });
 
   getQuoteBtn.addEventListener('click', e => {  
