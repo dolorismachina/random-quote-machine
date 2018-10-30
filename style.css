@@ -7,91 +7,89 @@
 
 body {
   background-color: black;
-  font-family: "Open Sans", sans-serif;
   filter: sepia(0.3);
-  padding: 5px 25px;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  position: relative;
-  height: 100vh;
+  align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
-  box-sizing: border-box;
+  position: relative;
 }
 
 .bg {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  filter: blur(15px) grayscale(0.54) sepia(0.5);
+  animation-fill-mode: forwards;
   background-attachment: fixed;
   background-image: var(--img);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -10;
+  filter: blur(15px) grayscale(0.54) sepia(0.5);
+  height: 100vh;
   padding: 0;
+  position: absolute;
   transform: scale(1.03);
-  animation-fill-mode: forwards;
+  width: 100%;
+  z-index: -10;
 }
 
 .quote-box {
-  width: auto;
-  min-width: 50%;
-  max-width: 70%;
-  min-height: 40%;
   background: hsla(0, 0%, 10%, 0.95);
-  border-radius: 3px;
-  position: relative;
+  border-radius: 3px;width: auto;
   display: flex;
   flex-direction: column;
+  max-width: 70%;
+  min-height: 40%;
+  min-width: 50%;
+  position: relative;
 }
 
 .quote-header {
-  font-family: 'Montserrat', sans-serif;
   background: #602221;
   color: #E03531;
-  padding: 3%;
-  font-size: 1.35rem;
   flex: 0 1 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.35rem;
+  padding: 3%;
 }
 
 .quote-author {
-  font-weight: 600;
   color: #E09E31;
   display: block;
   font-size: 1.5rem;
+  font-weight: 600;
   padding-top: 1rem;
 }
 
 .quote-text {
-  font-family: 'Marcellus SC', serif;
-  font-style: italic; 
-  letter-spacing: 2px;
-  font-size: 1.5rem;
   color: hsl(30, 25%, 50%);
-  line-height: 1.7;
-  text-align: center;
-  padding: 3% 6%;
-  flex: 1 1 0;
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
+  font-family: 'Marcellus SC', serif;
+  font-size: 1.5rem;
+  font-style: italic; 
   justify-content: center;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  padding: 3% 6%;
+  text-align: center;
 }
 
 .quote-buttons {
-  flex: 0 1 auto;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2.3rem;
   color: #F21C46;
+  display: flex;
+  flex: 0 1 auto;
+  font-size: 2.3rem;
+  justify-content: center;
   padding-bottom: 1.2rem;
 }
 
@@ -102,12 +100,12 @@ body {
 
 .quote-buttons button { 
   background: inherit;
+  border: none;
   color: hsl(30, 25%, 65%);
   cursor: pointer;
   justify-self: flex-end;
-  transition: color 250ms linear;
-  border: none;
   outline: none;
+  transition: color 250ms linear;
 }
 
 .quote-buttons > button:hover { 
@@ -156,8 +154,8 @@ a {
 
 @media (max-width: 1000px) {
   .quote-box {
-    width: 98%;
     max-width: 100%;
+    width: 98%;
   }
 
   .quote-text {
@@ -171,9 +169,9 @@ a {
 
 @media (max-width: 510px) {
   .quote-box {
+    background: hsla(0, 0%, 10%, 0.75);
     min-height: 100%;
     width: 100%;
-    background: hsla(0, 0%, 10%, 0.75);
   }
 
   .quote-text {
@@ -181,9 +179,9 @@ a {
   }
 
   .quote-buttons {
-    transform: scale(0.8);
-    justify-content: space-around;
     font-size: 4rem;
+    justify-content: space-around;
+    transform: scale(0.8);
   }
 
   .button-container {
